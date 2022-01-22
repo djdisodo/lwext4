@@ -1,5 +1,6 @@
 [workspace]
 
 members = [
-    "lwext4-sys"
+    "lwext4-sys",
+    "lwext4"
 ]
