@@ -1,0 +1,18 @@
+[package]
+name = "lwext4-sys"
+links = "lwext4"
+version = "0.1.0"
+edition = "2021"
+authors = ["sodo <djdisodo@gmail.com>"]
+license = "GPL-2.0"
+description = "ffi bind of lwext4 \"ext2/ext3/ext4 filesystem library for microcontrollers \""
+repository = "https://github.com/djdisodo/lwext4"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+
+[build-dependencies]
+make-cmd = "0.1.0"
+bindgen = "0.59.2"
+fs_extra = "1.2.0"
