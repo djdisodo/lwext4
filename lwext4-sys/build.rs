@@ -25,5 +25,12 @@ fn main() {
 		.use_core()
 		.parse_callbacks(Box::new(bindgen::CargoCallbacks))
 		.generate().unwrap();
-	bindings.write_to_file(out_dir.join("ext4.rs")).unwrap()
+	bindings.write_to_file(out_dir.join("ext4.rs")).unwrap();
+	let bindings = bindgen::builder()
+		.header(build_generic_dir.join("include").join("ext4_inode.h").to_str().unwrap())
+		.clang_arg(format!("-I{}", dbg!(build_generic_dir.join("include").to_str().unwrap())))
+		.use_core()
+		.parse_callbacks(Box::new(bindgen::CargoCallbacks))
+		.generate().unwrap();
+	bindings.write_to_file(out_dir.join("ext4_inode.rs")).unwrap()
 }

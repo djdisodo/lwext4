@@ -2,5 +2,6 @@
 
 members = [
     "lwext4-sys",
-    "lwext4"
+    "lwext4",
+    "lwext4-fuse"
 ]

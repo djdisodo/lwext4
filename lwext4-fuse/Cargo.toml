@@ -1,0 +1,10 @@
+[package]
+name = "lwext4-fuse"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lwext4 = { path = "../lwext4" }
+gpt = "3.0.0"
